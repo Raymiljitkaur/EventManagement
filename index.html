@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EVERYDAY EVENTS</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <!-- links to the javascript File -->
+      <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+      <script type="text/javascript" src="js/event.js"></script>
+      <!-- link to the CSS File -->
+      <link rel="stylesheet" href="Styles/event.css">
+      </head>
+      <body>
+        <!-- here is the header for the page -->
+        <header id="header">
+          <nav id="header_nav">
+            <img id="logo" src="Styles/logo.jpg" width="150" height="70" alt="EVENT LOGO" />
+            <h3 class="hidden">Main Navigation</h3>
+            <ul id="nav_list">
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">ABOUT</a></li>
+            </ul>
+          </nav>
+        </header>
+        <!-- End of Header -->
+        <!-- Starting of the main div -->
+        <main id="main">
+          <h1>EVERYDAY EVENTS</h1>
+            <!-- the events from which the user will select the event -->
+            <!-- Starting of the event div -->
+            <div class="event">
+              <!-- First Event -->
+              <div class="event1">
+                <h2>LEARN IN 60 MINUTES</h2>
+                <p> MONDAY:(10:00am-11:00am);</p>
+                <p><a href="https://calendar.google.com/calendar/r/eventedit?text=My+Custom+Event&dates=20180512T230000Z/20180513T030000Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=humber+college+-+Etobicoke+-+Ontario,+M9W+5L7">Add to your calendar</a></p>
+              <ul class="ul">
+                <li>Artificial Intelligence</li>
+                <li>what is AI and how it works?</li>
+              </ul>
+            </div>
+            <!-- Second Event -->
+            <div class="event2">
+              <h2>MEGAQUAKE SCIENCE EVENT</h2>
+              <p> May 1:(10:00am-11:00pm);</p>
+              <p><a href="https://calendar.google.com/calendar/r/eventedit?text=My+Custom+Event&dates=20180512T230000Z/20180513T030000Z&details=For+details,+link+here:+https://example.com/tickets-43251101208&location=humber+college+-+Etobicoke+-+Ontario,+M9W+5L7">Add to your calendar</a></p>
+            <ul class="ul">
+              <li>learn about EARTH QUAKES</li>
+              <li>VOLCANOS ?</li>
+              <li>SEVERE WEATHER EVENTS</li>
+            </ul>
+          </div>
+          <!-- Third Event -->
+          <div class="event3">
+            <h2>GAMES BEAT SUMMIT</h2>
+            <p> MONDAY:(10:00am-11:00am);</p>
+            <p><a href="https://calendar.google.com/calendar/r/eventedit">Add to your calendar</a></p>
+          <ul class="ul">
+            <li>DIGITAL GAMING</li>
+            <li>LIVE STREAMING</li>
+            <li>INTRACTIVE SESSIONS</li>
+          </ul>
+        </div>
+      </div>
+      <!-- End of the Event div -->
+    <!-- Starting of the sub sections for calendar API and maps API -->
+    <!-- div for all the content starts here -->
+    <div class="content">
+      <!-- starting of the page div -->
+      <div id="page">
+        <!-- First Sidebar -->
+        <div id="side1">
+          <p>CHECK YOUR UPCOMING EVENTS BY CLICKING BELOW</p>
+          <!--Add buttons to initiate auth sequence and sign out-->
+          <button id="authorize_button" style="display: none;background-color:white;">CLICK HERE.....!!!</button>
+          <button id="signout_button" style="display: none;">SIGN OUT</button>
+          <pre id="content" style="white-space: pre-wrap;"></pre>
+          <script type="text/javascript" src="js/calendar.js"></script>
+          <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"  onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+        <iframe src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23D81B60&amp;ctz=America%2FToronto&amp;src=dWlrdG9iZjE3ZmFrZTM0MmYxZjU4ZzV1bTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4uY2FuYWRpYW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=aHQzamxmYWFjNWxmZDYyNjN1bGZoNHRxbDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23B39DDB&amp;color=%230B8043&amp;color=%23B39DDB"
+         style="border:solid 1px #777" width="400" height="400" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <!-- end of first sidebar -->
+        <!-- Second Sidebar -->
+        <div id="side2">
+          <div style="display: none">
+            <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+            </div>
+            <div id="map"></div>
+            <div id="infowindow-content">
+              <span id="place-name"  class="title"></span><br>
+                <strong>Place ID</strong>: <span id="place-id"></span><br>
+              <span id="place-address"></span>
+              </div>
+              <script type="text/javascript" src="js/maps.js"></script>
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfOma_sgTmnTHmb2OBvGV-VFS97zt75O4&libraries=places&callback=initMap"async defer></script>
+            </div>
+            <!-- end of second sidebar -->
+          </div>
+          <!-- end of page div -->
+        </div>
+        <!-- content  div ends here -->
+        </main>
+        <!-- End of the main div -->
+        <!-- Footer of the page -->
+        <footer id="footer">
+            <h3 id="text">@Copyright</h3>
+            <div class="foot">
+                <nav>
+                    <ul id="foot_list">
+                        <li><a href="#">FIND EVENTS</a></li>
+                        <li><a href="#">ACTIVITIES</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+        <!-- End of the Footer -->
+      </body>
+      </html>
